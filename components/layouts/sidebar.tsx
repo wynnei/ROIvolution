@@ -121,14 +121,14 @@ const Sidebar = () => {
                                             </div>
                                         </Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link href="/forms/form" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuChat className="shrink-0 group-hover:!text-primary" />
                                                 <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('Roi Calculation')}</span>
                                             </div>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                         <Link href="/analytics" className="group">
                                             <div className="flex items-center">
@@ -159,33 +159,16 @@ const Sidebar = () => {
 
                                 <AnimateHeight duration={300} height={currentMenu === 'dashboard' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
-                                        <li>
+                                        {/* <li>
                                             <Link href="/">{t('sales')}</Link>
-                                        </li>
+                                        </li> */}
                                         <li>
-                                            <Link href="/analytics">{t('analytics')}</Link>
+                                            <Link href="/">{t('analytics')}</Link>
                                         </li>
-                                        <li>
-                                            <Link href="/finance">{t('finance')}</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/crypto">{t('crypto')}</Link>
-                                        </li>
+                                       
                                     </ul>
                                 </AnimateHeight>
                             </li>
-
-                      
-
-                            <li className="menu nav-item">
-                                <Link href="/charts" className="group">
-                                    <div className="flex items-center">
-                                        <IconMenuCharts className="shrink-0 group-hover:!text-primary" />
-                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('charts')}</span>
-                                    </div>
-                                </Link>
-                            </li>
-
 
                             <h2 className="-mx-4 mb-1 flex items-center bg-white-light/30 px-7 py-3 font-extrabold uppercase dark:bg-dark dark:bg-opacity-[0.08]">
                                 <IconMinus className="hidden h-5 w-4 flex-none" />
@@ -195,10 +178,10 @@ const Sidebar = () => {
                                 <ul>
                         
                                     <li className="nav-item">
-                                        <Link href="/apps/contacts" className="group">
+                                        <Link href="/apps/configs" className="group">
                                             <div className="flex items-center">
                                                 <IconMenuContacts className="shrink-0 group-hover:!text-primary" />
-                                                <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('contacts')}</span>
+                                                <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">{t('Registration Details')}</span>
                                             </div>
                                         </Link>
                                     </li>

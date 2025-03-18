@@ -13,10 +13,10 @@ import { Transition, Dialog } from '@headlessui/react';
 import React, { Fragment, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
-const ComponentsAppsContacts = () => {
+const Configs = () => {
     const [addContactModal, setAddContactModal] = useState<any>(false);
 
-    const [value, setValue] = useState<any>('grid');
+    const [value, setValue] = useState<any>('list');
     const [defaultParams] = useState({
         id: null,
         name: '',
@@ -47,19 +47,8 @@ const ComponentsAppsContacts = () => {
             followers: '5K',
             following: 500,
         },
-        {
-            id: 2,
-            path: 'profile-35.png',
-            name: 'Linda Nelson',
-            role: 'Web Designer',
-            email: 'linda@mail.com',
-            location: 'Sydney, Australia',
-            phone: '+1 202 555 0170',
-            posts: 25,
-            followers: '21.5K',
-            following: 350,
-        },
-      
+       
+     
     ]);
 
     const [filteredItems, setFilteredItems] = useState<any>(contactList);
@@ -168,13 +157,68 @@ const ComponentsAppsContacts = () => {
                                 Add Contact
                             </button>
                         </div>
-                       
-                       
+                        
+                        
                     </div>
-                   
+                  
                 </div>
             </div>
-           
+            {value === 'list' && (
+                <div className="panel mt-5 overflow-hidden border-0 p-0">
+                    <div className="table-responsive">
+                        <table className="table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Location</th>
+                                    <th>Phone</th>
+                                    <th className="!text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {filteredItems.map((contact: any) => {
+                                    return (
+                                        <tr key={contact.id}>
+                                            <td>
+                                                <div className="flex w-max items-center">
+                                                    {contact.path && (
+                                                        <div className="w-max">
+                                                            <img src={`/assets/images/${contact.path}`} className="h-8 w-8 rounded-full object-cover ltr:mr-2 rtl:ml-2" alt="avatar" />
+                                                        </div>
+                                                    )}
+                                                    {!contact.path && contact.name && (
+                                                        <div className="grid h-8 w-8 place-content-center rounded-full bg-primary text-sm font-semibold text-white ltr:mr-2 rtl:ml-2"></div>
+                                                    )}
+                                                    {!contact.path && !contact.name && (
+                                                        <div className="rounded-full border border-gray-300 p-2 ltr:mr-2 rtl:ml-2 dark:border-gray-800">
+                                                            <IconUser className="h-4.5 w-4.5" />
+                                                        </div>
+                                                    )}
+                                                    <div>{contact.name}</div>
+                                                </div>
+                                            </td>
+                                            <td>{contact.email}</td>
+                                            <td className="whitespace-nowrap">{contact.location}</td>
+                                            <td className="whitespace-nowrap">{contact.phone}</td>
+                                            <td>
+                                                <div className="flex items-center justify-center gap-4">
+                                                    <button type="button" className="btn btn-sm btn-outline-primary" onClick={() => editUser(contact)}>
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" className="btn btn-sm btn-outline-danger" onClick={() => deleteUser(contact)}>
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            )}
 
             {value === 'grid' && (
                 <div className="mt-5 grid w-full grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
@@ -334,4 +378,4 @@ const ComponentsAppsContacts = () => {
     );
 };
 
-export default ComponentsAppsContacts;
+export default Configs;
