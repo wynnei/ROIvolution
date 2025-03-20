@@ -8,8 +8,8 @@ export default function Home() {
   const [text, setText] = useState("");
   const [message, setMessage] = useState("");
   const [files, setFiles] = useState<string[]>([]);
-  const API_URL = "https://RoiMyFunctionApp.azurewebsites.net/api";
-// const API_URL = "http://localhost:7071"
+//   const API_URL = "https://RoiMyFunctionApp.azurewebsites.net/api";
+const API_URL = "http://localhost:7071"
   
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
