@@ -348,89 +348,7 @@ const ComponentsDashboardAnalytics = () => {
         },
     };
 
-    //Sales By Category
-    // const salesByCategory: any = {
-    //     series: [361, 21874, ],
-    //     options: {
-    //         chart: {
-    //             type: 'donut',
-    //             height: 460,
-    //             fontFamily: 'Nunito, sans-serif',
-    //         },
-    //         dataLabels: {
-    //             enabled: false,
-    //         },
-    //         stroke: {
-    //             show: true,
-    //             width: 25,
-    //             colors: isDark ? '#0e1726' : '#fff',
-    //         },
-    //         colors: isDark ? ['#5c1ac3', '#e2a03f'] : ['#e2a03f', '#5c1ac3'],
-    //         legend: {
-    //             position: 'bottom',
-    //             horizontalAlign: 'center',
-    //             fontSize: '14px',
-    //             markers: {
-    //                 width: 10,
-    //                 height: 10,
-    //                 offsetX: -2,
-    //             },
-    //             height: 50,
-    //             offsetY: 20,
-    //         },
-    //         plotOptions: {
-    //             pie: {
-    //                 donut: {
-    //                     size: '65%',
-    //                     background: 'transparent',
-    //                     labels: {
-    //                         show: true,
-    //                         name: {
-    //                             show: true,
-    //                             fontSize: '29px',
-    //                             offsetY: -10,
-    //                         },
-    //                         value: {
-    //                             show: true,
-    //                             fontSize: '26px',
-    //                             color: isDark ? '#bfc9d4' : '#e2a03f',
-    //                             offsetY: 16,
-    //                             formatter: (val: any) => {
-    //                                 return val;
-    //                             },
-    //                         },
-    //                         total: {
-    //                             show: true,
-    //                             label: 'Total',
-    //                             color: '#888ea8',
-    //                             fontSize: '29px',
-    //                             formatter: (w: any) => {
-    //                                 return w.globals.seriesTotals.reduce(function (a: any, b: any) {
-    //                                     return a + b;
-    //                                 }, 0);
-    //                             },
-    //                         },
-    //                     },
-    //                 },
-    //             },
-    //         },
-    //         labels: ['Side Effects', 'No Side Effects'],
-    //         states: {
-    //             hover: {
-    //                 filter: {
-    //                     type: 'none',
-    //                     value: 0.15,
-    //                 },
-    //             },
-    //             active: {
-    //                 filter: {
-    //                     type: 'none',
-    //                     value: 0.15,
-    //                 },
-    //             },
-    //         },
-    //     },
-    // };
+ 
     const salesByCategory: any = {
         series: [1312, 76329],
         options: {
@@ -447,7 +365,7 @@ const ComponentsDashboardAnalytics = () => {
             stroke: {
                 show: false,
             },
-            labels: ['New Registration', 'Certificate Renewal'],
+            labels: ['Failure', 'Success'],
             colors: ['#4361ee', '#E7515A'],
             responsive: [
                 {
@@ -469,12 +387,12 @@ const ComponentsDashboardAnalytics = () => {
      const revenueChart: any = {
         series: [
             {
-                name: 'Renewed Certificates',
+                name: 'Cumulative Cost',
                 data: [16800, 16800, 15500, 17800, 15500, 17000, 19000, 16000, 15000, 17000, 14000, 17000],
             },
             {
-                name: 'Non-Renewed Certificates',
-                data: [63, 102, 32, 5, 75, 472, 1065, 81, 32, 543, 80, 31],
+                name: 'Cumulative Benefit',
+                data: [19000, 19000, 16800, 19000, 16800, 19000, 16800, 19000, 19000, 16800, 19000, 19000],
             },
         ],
         options: {
@@ -627,288 +545,14 @@ const ComponentsDashboardAnalytics = () => {
                 </li>
             </ul>
             <div className="pt-5">
-                {/* <div className="mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div className="panel h-full sm:col-span-2 lg:col-span-1">
-                       
-                        <div className="mb-5 flex justify-between dark:text-white-light">
-                            <h5 className="text-lg font-semibold ">Statistics</h5>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:text-primary"
-                                    button={<IconHorizontalDots className="text-black/70 hover:!text-primary dark:text-white/70" />}
-                                >
-                                    <ul>
-                                        <li>
-                                            <button type="button">This Week</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Last Week</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">This Month</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Last Month</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className="grid gap-8 text-sm font-bold text-[#515365] sm:grid-cols-2">
-                            <div>
-                                <div>
-                                    <div>Total Visits</div>
-                                    <div className="text-lg text-[#f8538d]">423,964</div>
-                                </div>
-                                {isMounted && <ReactApexChart series={totalVisit.series} options={totalVisit.options} type="line" height={58} width={'100%'} />}
-                            </div>
-
-                            <div>
-                                <div>
-                                    <div>Paid Visits</div>
-                                    <div className="text-lg text-[#f8538d]">7,929</div>
-                                </div>
-
-                                {isMounted && <ReactApexChart series={paidVisit.series} options={paidVisit.options} type="line" height={58} width={'100%'} />}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="panel h-full">
-                        <div className="mb-5 flex justify-between dark:text-white-light">
-                            <h5 className="text-lg font-semibold ">Expenses</h5>
-
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:text-primary"
-                                    button={<IconHorizontalDots className="text-black/70 hover:!text-primary dark:text-white/70" />}
-                                >
-                                    <ul>
-                                        <li>
-                                            <button type="button">This Week</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Last Week</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">This Month</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Last Month</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className=" my-10 text-3xl font-bold text-[#e95f2b]">
-                            <span>$ 45,141 </span>
-                            <span className="text-sm text-black ltr:mr-2 rtl:ml-2 dark:text-white-light">this week</span>
-                            <IconTrendingUp className="inline text-success" />
-                        </div>
-                        <div className="flex items-center justify-between">
-                            <div className="h-5 w-full overflow-hidden rounded-full bg-dark-light p-1 shadow-3xl dark:bg-dark-light/10 dark:shadow-none">
-                                <div
-                                    className="relative h-full w-full rounded-full bg-gradient-to-r from-[#4361ee] to-[#805dca] before:absolute before:inset-y-0 before:m-auto before:h-2 before:w-2 before:rounded-full before:bg-white ltr:before:right-0.5 rtl:before:left-0.5"
-                                    style={{ width: '65%' }}
-                                ></div>
-                            </div>
-                            <span className="ltr:ml-5 rtl:mr-5 dark:text-white-light">57%</span>
-                        </div>
-                    </div>
-
-                    <div
-                        className="panel grid h-full grid-cols-1 content-between overflow-hidden before:absolute before:-right-44 before:bottom-0 before:top-0 before:m-auto before:h-96 before:w-96 before:rounded-full before:bg-[#1937cc]"
-                        style={{
-                            background: 'linear-gradient(0deg,#00c6fb -227%,#005bea)',
-                        }}
-                    >
-                        <div className="z-[7] mb-16 flex items-start justify-between text-white-light">
-                            <h5 className="text-lg font-semibold">Total Balance</h5>
-
-                            <div className="relative whitespace-nowrap text-xl">
-                                $ 41,741.42
-                                <span className="mt-1 table rounded bg-[#4361ee] p-1 text-xs text-[#d3d3d3] ltr:ml-auto rtl:mr-auto">+ 2453</span>
-                            </div>
-                        </div>
-                        <div className="z-10 flex items-center justify-between">
-                            <div className="flex items-center justify-between">
-                                <button type="button" className="place-content-center rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc] ltr:mr-2 rtl:ml-2">
-                                    <IconPlus />
-                                </button>
-                                <button type="button" className="grid place-content-center rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#1937cc]">
-                                    <IconCreditCard />
-                                </button>
-                            </div>
-                            <button type="button" className="z-10 rounded p-1 text-white-light shadow-[0_0_2px_0_#bfc9d4] hover:bg-[#4361ee]">
-                                Upgrade
-                            </button>
-                        </div>
-                    </div>
-                </div> */}
-                <div className="mb-6 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
-                    <div className="panel bg-gradient-to-r from-cyan-500 to-cyan-400">
-                        <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Active Certificates</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 170 </div>
-                            <div className="badge bg-white/30">+ 2.35% </div>
-                        </div>
-                        <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 44,700
-                        </div>
-                    </div>
-
-                    {/* Sessions */}
-                    <div className="panel bg-gradient-to-r from-violet-500 to-violet-400">
-                        <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Expired Certificates</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 107 </div>
-                            <div className="badge bg-white/30">- 2.35% </div>
-                        </div>
-                        <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 84,709
-                        </div>
-                    </div>
-
-                    {/*  Time On-Site */}
-                    <div className="panel bg-gradient-to-r from-blue-500 to-blue-400">
-                        <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Renewal Processing </div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 38,085 </div>
-                            <div className="badge bg-white/30">+ 1.35% </div>
-                        </div>
-                        <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 37,894
-                        </div>
-                    </div>
-
-                    {/* Bounce Rate */}
-                    <div className="panel bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
-                        <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Renewed Certificates</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 49.10% </div>
-                            <div className="badge bg-white/30">- 0.35% </div>
-                        </div>
-                        <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 50.01%
-                        </div>
-                    </div>
-                </div>
+               
+               
 
                 <div className="mb-6 grid gap-6 lg:grid-cols-3">
-                    {/* <div className="panel h-full p-0 lg:col-span-2">
-                        <div className="mb-5 flex items-start justify-between border-b border-white-light p-5  dark:border-[#1b2e4b] dark:text-white-light">
-                            <h5 className="text-lg font-semibold ">Mortality vs. Survival Rates </h5>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:text-primary"
-                                    button={<IconHorizontalDots className="text-black/70 hover:!text-primary dark:text-white/70" />}
-                                >
-                                    <ul>
-                                        <li>
-                                            <button type="button">View</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Update</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Delete</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-
-                        {isMounted && <ReactApexChart options={uniqueVisitorSeries.options} series={uniqueVisitorSeries.series} type="bar" height={360} width={'100%'} />}
-                    </div> */}
+                   
                     <div className="panel h-full xl:col-span-2">
                             <div className="mb-5 flex items-center justify-between dark:text-white-light">
-                                <h5 className="text-lg font-semibold">Renewed Verses Non-Renewed Certificates</h5>
+                                <h5 className="text-lg font-semibold">Project Time Line Cost Verses Benefit</h5>
                                 <div className="dropdown">
                                     <Dropdown
                                         offset={[0, 1]}
@@ -945,122 +589,10 @@ const ComponentsDashboardAnalytics = () => {
                             </div>
                         </div>
 
-                    {/* <div className="panel h-full">
-                        <div className="-mx-5 mb-5 flex items-start justify-between border-b border-white-light p-5 pt-0  dark:border-[#1b2e4b] dark:text-white-light">
-                            <h5 className="text-lg font-semibold ">Activity Log</h5>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:text-primary"
-                                    button={<IconHorizontalDots className="text-black/70 hover:!text-primary dark:text-white/70" />}
-                                >
-                                    <ul>
-                                        <li>
-                                            <button type="button">View All</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Mark as Read</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
-                        </div>
-                        <PerfectScrollbar className="perfect-scrollbar relative h-[360px] ltr:-mr-3 ltr:pr-3 rtl:-ml-3 rtl:pl-3">
-                            <div className="space-y-7">
-                                <div className="flex">
-                                    <div className="relative z-10 shrink-0 before:absolute before:left-4 before:top-10 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-white shadow shadow-secondary">
-                                            <IconPlus className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">
-                                            New project created :{' '}
-                                            <button type="button" className="text-success">
-                                                [VRISTO Admin Template]
-                                            </button>
-                                        </h5>
-                                        <p className="text-xs text-white-dark">27 Feb, 2020</p>
-                                    </div>
-                                </div>
-                                <div className="flex">
-                                    <div className="relative z-10 shrink-0 before:absolute before:left-4 before:top-10 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-success text-white shadow-success">
-                                            <IconMail className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">
-                                            Mail sent to{' '}
-                                            <button type="button" className="text-white-dark">
-                                                HR
-                                            </button>{' '}
-                                            and{' '}
-                                            <button type="button" className="text-white-dark">
-                                                Admin
-                                            </button>
-                                        </h5>
-                                        <p className="text-xs text-white-dark">28 Feb, 2020</p>
-                                    </div>
-                                </div>
-                                <div className="flex">
-                                    <div className="relative z-10 shrink-0 before:absolute before:left-4 before:top-10 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
-                                            <IconChecks className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">Server Logs Updated</h5>
-                                        <p className="text-xs text-white-dark">27 Feb, 2020</p>
-                                    </div>
-                                </div>
-                                <div className="flex">
-                                    <div className="relative z-10 shrink-0 before:absolute before:left-4 before:top-10 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-danger text-white">
-                                            <IconChecks className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">
-                                            Task Completed :
-                                            <button type="button" className="ml-1 text-success">
-                                                [Backup Files EOD]
-                                            </button>
-                                        </h5>
-                                        <p className="text-xs text-white-dark">01 Mar, 2020</p>
-                                    </div>
-                                </div>
-                                <div className="flex">
-                                    <div className="relative z-10 shrink-0 before:absolute before:left-4 before:top-10 before:h-[calc(100%-24px)] before:w-[2px] before:bg-white-dark/30 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-warning text-white">
-                                            <IconFile className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">
-                                            Documents Submitted from <button type="button">Sara</button>
-                                        </h5>
-                                        <p className="text-xs text-white-dark">10 Mar, 2020</p>
-                                    </div>
-                                </div>
-                                <div className="flex">
-                                    <div className="shrink-0 ltr:mr-2 rtl:ml-2">
-                                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-dark text-white">
-                                            <IconServer className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold dark:text-white-light">Server rebooted successfully</h5>
-                                        <p className="text-xs text-white-dark">06 Apr, 2020</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </PerfectScrollbar>
-                    </div> */}
+                   
                      <div className="panel h-full">
                             <div className="mb-5 flex items-center">
-                                <h5 className="text-lg font-semibold dark:text-white-light">New Registration Verses Certificate Renewal</h5>
+                                <h5 className="text-lg font-semibold dark:text-white-light">Success Probability</h5>
                             </div>
                             <div>
                                 <div className="rounded-lg bg-white dark:bg-black">
@@ -1079,7 +611,7 @@ const ComponentsDashboardAnalytics = () => {
                 <div className="mb-6 grid gap-6 sm:grid-cols-3 xl:grid-cols-5">
                     <div className="panel h-full sm:col-span-3 xl:col-span-2">
                         <div className="mb-5 flex items-start justify-between">
-                            <h5 className="text-lg font-semibold dark:text-white-light">Visitors by Browser</h5>
+                            <h5 className="text-lg font-semibold dark:text-white-light">Risk Factor Analysis</h5>
                         </div>
                         <div className="flex flex-col space-y-5">
                             <div className="flex items-center">
@@ -1090,7 +622,7 @@ const ComponentsDashboardAnalytics = () => {
                                 </div>
                                 <div className="w-full flex-initial px-3">
                                     <div className="w-summary-info mb-1 flex justify-between font-semibold text-white-dark">
-                                        <h6>Chrome</h6>
+                                        <h6>Leadership Alignment</h6>
                                         <p className="text-xs ltr:ml-auto rtl:mr-auto">65%</p>
                                     </div>
                                     <div>
@@ -1111,7 +643,7 @@ const ComponentsDashboardAnalytics = () => {
                                 </div>
                                 <div className="w-full flex-initial px-3">
                                     <div className="w-summary-info mb-1 flex justify-between font-semibold text-white-dark">
-                                        <h6>Safari</h6>
+                                        <h6>Communication Plan</h6>
                                         <p className="text-xs ltr:ml-auto rtl:mr-auto">40%</p>
                                     </div>
                                     <div>
@@ -1132,7 +664,7 @@ const ComponentsDashboardAnalytics = () => {
                                 </div>
                                 <div className="w-full flex-initial px-3">
                                     <div className="w-summary-info mb-1 flex justify-between font-semibold text-white-dark">
-                                        <h6>Others</h6>
+                                        <h6>Change Management</h6>
                                         <p className="text-xs ltr:ml-auto rtl:mr-auto">25%</p>
                                     </div>
                                     <div>
@@ -1154,8 +686,8 @@ const ComponentsDashboardAnalytics = () => {
                                 <IconUsersGroup className="h-5 w-5" />
                             </div>
                             <div className="font-semibold ltr:ml-3 rtl:mr-3">
-                                <p className="text-xl dark:text-white-light">31.6K</p>
-                                <h5 className="text-xs text-[#506690]">Followers</h5>
+                                <p className="text-xl dark:text-white-light">73.1%</p>
+                                <h5 className="text-xs text-[#506690]">Expected Success Rate</h5>
                             </div>
                         </div>
                         <div className="h-40">
@@ -1169,8 +701,8 @@ const ComponentsDashboardAnalytics = () => {
                                 <IconLink className="h-5 w-5" />
                             </div>
                             <div className="font-semibold ltr:ml-3 rtl:mr-3">
-                                <p className="text-xl dark:text-white-light">1,900</p>
-                                <h5 className="text-xs text-[#506690]">Referral</h5>
+                                <p className="text-xl dark:text-white-light">49.43%</p>
+                                <h5 className="text-xs text-[#506690]">Return On Investment</h5>
                             </div>
                         </div>
                         <div className="h-40">
@@ -1184,8 +716,8 @@ const ComponentsDashboardAnalytics = () => {
                                 <IconChatDots className="h-5 w-5" />
                             </div>
                             <div className="font-semibold ltr:ml-3 rtl:mr-3">
-                                <p className="text-xl dark:text-white-light">18.2%</p>
-                                <h5 className="text-xs text-[#506690]">Engagement</h5>
+                                <p className="text-xl dark:text-white-light">81.2%</p>
+                                <h5 className="text-xs text-[#506690]">Net Benefit</h5>
                             </div>
                         </div>
                         <div className="h-40">

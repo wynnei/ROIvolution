@@ -27,15 +27,7 @@ const ComponentsFormsLayoutsGrid = () => {
                     <input id="dueDate" type="date" className="form-input w-full" />
                 </div>
 
-                {/* <div>
-                    <label htmlFor="paymentMethod" className="block font-medium">Payment Method</label>
-                    <select id="paymentMethod" className="form-select w-full text-gray-700">
-                        <option>Choose...</option>
-                        <option>Credit Card</option>
-                        <option>Bank Transfer</option>
-                        <option>PayPal</option>
-                    </select>
-                </div> */}
+               
 
                 <div>
                     <label htmlFor="amountPaid" className="block font-medium">AI adoption percentage (how many calls AI should handle)
@@ -43,10 +35,7 @@ const ComponentsFormsLayoutsGrid = () => {
                     <input id="amountPaid" type="text" placeholder="Enter Amount Paid" className="form-input w-full" />
                 </div>
 
-                {/* <div>
-                    <label htmlFor="paymentDetails" className="block font-medium">Payment Details</label>
-                    <textarea id="paymentDetails" placeholder="Enter Payment Details" className="form-input w-full h-24"></textarea>
-                </div> */}
+                
 
                 <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-all duration-300">
                     Submit

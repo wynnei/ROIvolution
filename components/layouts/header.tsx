@@ -148,7 +148,7 @@ const Header = () => {
     return (
         <header className={`z-40 ${themeConfig.semidark && themeConfig.menu === 'horizontal' ? 'dark' : ''}`}>
             <div className="shadow-sm">
-                <div className="relative flex w-full items-center bg-white px-5 py-2.5 dark:bg-black">
+                <div className="relative flex w-full items-center bg-blue-200 px-5 py-2.5 dark:bg-black">
                     <div className="horizontal-logo flex items-center justify-between ltr:mr-2 rtl:ml-2 lg:hidden">
                         <Link href="/" className="main-logo flex shrink-0 items-center">
                             <img className="inline w-8 ltr:-ml-1 rtl:-mr-1" src="/assets/images/logo.svg" alt="logo" />
@@ -199,12 +199,12 @@ const Header = () => {
                                 offset={[0, 8]}
                                 placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
                                 btnClassName="relative group block"
-                                button={<img className="h-9 w-9 rounded-full object-cover saturate-50 group-hover:saturate-100" src="/assets/images/user-profile.jpeg" alt="userProfile" />}
+                                button={<img className="h-9 w-9 rounded-full object-cover saturate-50 group-hover:saturate-100" src="/assets/images/sweet-bg.jpg" alt="userProfile" />}
                             >
                                 <ul className="w-[230px] !py-0 font-semibold text-dark dark:text-white-dark dark:text-white-light/90">
                                     <li>
                                         <div className="flex items-center px-4 py-4">
-                                            <img className="h-10 w-10 rounded-md object-cover" src="/assets/images/user-profile.jpeg" alt="userProfile" />
+                                            <img className="h-10 w-10 rounded-md object-cover" src="/assets/images/sweet-bg.jpg" alt="userProfile" />
                                             <div className="truncate ltr:pl-4 rtl:pr-4">
                                                 <h4 className="text-base">
                                                     Winnie Atieno

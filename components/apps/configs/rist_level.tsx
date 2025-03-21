@@ -38,8 +38,8 @@ const Configs = () => {
         {
             id: 1,
             path: 'profile-35.png',
-            name: 'Finance',
-            role: 'Web Developer',
+            name: 'Low',
+            role: 'Take caution',
             email: 'alan@mail.com',
             location: 'Boston, USA',
             phone: '+1 202 555 0197',
@@ -50,8 +50,8 @@ const Configs = () => {
         {
             id: 2,
             path: 'profile-35.png',
-            name: 'Retail',
-            role: 'Web Developer',
+            name: 'Medium',
+            role: 'Take caution',
             email: 'alan@mail.com',
             location: 'Boston, USA',
             phone: '+1 202 555 0197',
@@ -62,20 +62,8 @@ const Configs = () => {
         {
             id: 3,
             path: 'profile-35.png',
-            name: 'Education',
-            role: 'Web Developer',
-            email: 'alan@mail.com',
-            location: 'Boston, USA',
-            phone: '+1 202 555 0197',
-            posts: 25,
-            followers: '5K',
-            following: 500,
-        },
-        {
-            id: 4,
-            path: 'profile-35.png',
-            name: 'Health',
-            role: 'Web Developer',
+            name: 'High',
+            role: 'Take caution',
             email: 'alan@mail.com',
             location: 'Boston, USA',
             phone: '+1 202 555 0197',
@@ -184,18 +172,18 @@ const Configs = () => {
     return (
         <div>
             <div className="flex flex-wrap items-center justify-between gap-4">
-                <h2 className="text-xl">Company Types</h2>
+                <h2 className="text-xl">Risk Levels</h2>
                 <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
-                    {/* <div className="flex gap-3">
-                        <div>
+                    <div className="flex gap-3">
+                        {/* <div>
                             <button type="button" className="btn btn-primary" onClick={() => editUser()}>
                                 <IconUserPlus className="ltr:mr-2 rtl:ml-2" />
                                 Add Contact
                             </button>
-                        </div>
+                        </div> */}
                         
                         
-                    </div> */}
+                    </div>
                   
                 </div>
             </div>
@@ -205,10 +193,10 @@ const Configs = () => {
                         <table className="table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Company Name</th>
-                                    <th>Email</th>
-                                    <th>Location</th>
-                                    {/* <th>Phone</th> */}
+                                    <th>Rist Level</th>
+                                    <th>Description</th>
+                                    {/* <th>Location</th>
+                                    <th>Phone</th> */}
                                     {/* <th className="!text-center">Actions</th> */}
                                 </tr>
                             </thead>
@@ -234,8 +222,8 @@ const Configs = () => {
                                                     <div>{contact.name}</div>
                                                 </div>
                                             </td>
-                                            <td>{contact.email}</td>
-                                            <td className="whitespace-nowrap">{contact.location}</td>
+                                            {/* <td>{contact.email}</td> */}
+                                            <td className="whitespace-nowrap">{contact.role}</td>
                                             {/* <td className="whitespace-nowrap">{contact.phone}</td> */}
                                             {/* <td>
                                                 <div className="flex items-center justify-center gap-4">

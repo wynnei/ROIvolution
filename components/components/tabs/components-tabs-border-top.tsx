@@ -16,7 +16,7 @@ const ComponentsTabsBorderTop = () => {
 
     return (
         <PanelCodeHighlight
-            title="Boost Call Center ROI with AI"
+            title="Digital Transformation ROI with AI"
            
         >
             <div className="mb-5">
@@ -69,127 +69,116 @@ const ComponentsTabsBorderTop = () => {
                             </Tab>
                         </Tab.List>
                         <Tab.Panels>
-                            <Tab.Panel>
-                                <div className="h-screen w-full flex flex-col items-center justify-center text-center 
-               bg-[url('/assets/images/auth/map.png')] bg-cover bg-center ">
-                                    <h4 className="mb-4 text-3xl font-semibold">We move the world!</h4>
-                                    <p className="mb-4 text-xl">
-                                    ROIvolution is an advanced AI-powered ROI calculator designed specifically for call centers. 
-                                    </p>
-                                    <p className="mb-4 text-xl" >
-                                    It helps businesses analyze cost savings, efficiency gains, and customer experience improvements through AI automation
-                                    </p>
-                                    <p className="mb-4 text-xl">
-                                     It helps businesses analyze cost savings, efficiency gains, and customer experience improvements through AI automation
-                                    </p>
-                                    
-                                </div>
-                            </Tab.Panel>
-                            <Tab.Panel>
-                                <div className="h-screen w-full flex flex-col items-center justify-center text-center 
-               bg-[url('/assets/images/auth/map.png')] bg-cover bg-center ">
-                                    <div className="flex items-start pt-5">
-                                        
-                                        <div className="flex-auto">
-                                            <h5 className="mb-4 text-3xl font-medium">Discover Your Potential Savings</h5>
-                                            <p className="text-white-dark text-xl">
-                                            See how much AI-powered automation can reduce costs and boost efficiency.
-                                            </p>
-                                            <p className="text-white-dark text-xl">
-                                            Try the AI ROI Calculator Now
-                                            </p>
-                                            <p className="text-white-dark text-xl">
-                                            No sign-up required. Get results in seconds!
-                                            </p>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </Tab.Panel>
-                            <Tab.Panel>
-                                <div className="h-screen w-full flex flex-col items-center justify-center text-center 
-               bg-[url('/assets/images/auth/map.png')] bg-cover bg-center">
-                                    
-                                    <p className="text-white-dark text-xl">
-                                    ROIvolution is an AI-powered tool designed to help call centers calculate their potential return on investment (ROI) from AI automation. 
-                                    </p >
-                                    <p className="text-white-dark text-xl">
-                                     By inputting key operational data, users receive detailed cost savings estimates, efficiency improvements, and strategic insights.
-                                    </p>
-                                    <p className="mb-8 mt-8 text-3xl font-medium">
-                                    Step-by-Step Breakdown
-                                    </p>
-                                    <p className="mb-4 text-2xl font-medium">
-                                    Step 1: Input Your Call Center Data
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                    Users enter key metrics such as:
-Current costs (e.g., staffing, call handling expenses)
-Call volume & 
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                    handling time
-AI implementation level (e.g., chatbot integration, voice AI, automation percentage)
-                                    </p>
-                                    <p className="mb-4 text-2xl font-medium">
-                                    Step 2: AI-Driven Analysis & Calculation
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                    
-Predict efficiency improvements (e.g., faster call resolution, improved customer experience).
-Compare manual vs. AI-enhanced performance.
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                    The system applies AI-driven models to:
-Estimate cost savings (e.g., reduced agent workload, lower operational expenses).
+                        <Tab.Panel>
+  <div
+    className="h-screen w-full flex flex-col items-center text-center 
+               bg-[url('/assets/images/test1.jpeg')] bg-cover bg-center pt-10"
+  >
+    <h4 className="mb-4 text-3xl font-semibold bg-blue-500 text-white px-4 py-2 rounded-md">
+      We move the world!
+    </h4>
+    <p className="mb-4 text-xl bg-blue-500 text-white px-4 py-2 rounded-md">
+      ROIvolution is an advanced AI-powered ROI calculator designed for digital transformation preparation.
+    </p>
+    <p className="mb-4 text-xl bg-blue-500 text-white px-4 py-2 rounded-md">
+      It helps businesses analyze cost savings, efficiency gains, and customer experience improvements through AI automation.
+    </p>
+    <p className="mb-4 text-xl bg-blue-500 text-white px-4 py-2 rounded-md">
+      It helps businesses analyze cost savings, efficiency gains, and customer experience improvements through AI automation.
+    </p>
+  </div>
+</Tab.Panel>
 
-                                    </p>
-                                    <p className="mb-4 text-2xl font-medium">
-                                    Step 3: Get Instant ROI Insights
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                    Users receive a detailed report that includes:
-Projected savings over time (monthly, yearly).
+                        
+<Tab.Panel>
+  <div className="h-screen w-full flex flex-col items-center justify-center text-center 
+               bg-[url('/assets/images/test3.jpg')] bg-cover bg-center">
+    <div className="flex items-start pt-5">
+      <div className="flex-auto p-6 bg-white text-black rounded-lg shadow-lg">
+        <h5 className="mb-5 text-3xl font-medium">Discover Your Potential Savings</h5>
+        <p className="mb-5 text-xl">See how much AI-powered automation can reduce costs and boost efficiency.</p>
+        <p className="mb-5 text-xl">Try the AI ROI Calculator Now</p>
+        <p className="mb-5 text-xl">No sign-up required. Get results in seconds!</p>
+      </div>
+    </div>
+  </div>
+</Tab.Panel>
+                           
+<Tab.Panel>
+  <div className="h-screen w-full flex flex-col items-center justify-center text-center 
+               bg-[url('/assets/images/test4.jpg')] bg-cover bg-center p-6">
+    <div className=" mt-10 mb-10 bg-white text-black p-6 rounded-lg shadow-lg max-w-4xl">
+    
+     
 
-                                    </p>
-                                    <p className="text-white-dark text-xl">
-                                 
-Efficiency gains & productivity improvements.
-Breakdown of AI impact on different areas (e.g., cost per call reduction, customer satisfaction increase).
-                                    </p>
-                                    <p className="mb-4 text-2xl font-medium">
-                                    Step 4: Make Data-Driven Decisions
-                                    </p>
-                                    <p className="text-white-dark text-xl ">
-                                    Users can:
-Adjust AI implementation levels to see different outcomes.
-Download or share reports 
-                                    </p>
-                                    <p className="text-white-dark text-xl ">
-                                    Users can:
-for internal decision-making.
-Take actionable steps toward AI adoption in their call center.
-                                    </p>
-                                </div>
-                            </Tab.Panel>
-                            <Tab.Panel>
-                                <div className="h-screen w-full flex flex-col items-center justify-center text-center 
-               bg-[url('/assets/images/auth/map.png')] bg-cover bg-center">
-                                    <div className="flex items-start">
-                                        <p className="mb-4 text-3xl font-medium">
-                                            The Time is NOW 
-                                        </p>
-                                    </div>
-                                    <div>
-                                    <Link href="/forms/form">
-          <button className=" mt-4 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 
-                             rounded-lg font-semibold transition-all duration-300">
-            Get Started
-          </button>
-        </Link>
-                                    </div>
-                                </div>
-                            </Tab.Panel>
+      <p className="text-3xl font-medium mb-8">Step-by-Step Breakdown</p>
+
+      <p className="text-2xl font-medium mb-4">Step 1: Input Your  Data</p>
+      <p className="text-xl mb-4">
+        Users enter key metrics such as:
+      </p>
+      <ul className="text-xl mb-4 list-disc list-inside">
+        <li>Current costs (e.g., staffing, call handling expenses)</li>
+        <li>Call volume & handling time</li>
+        <li>AI implementation level (e.g., chatbot integration, voice AI, automation percentage)</li>
+      </ul>
+
+      <p className="text-2xl font-medium mb-4">Step 2: AI-Driven Analysis & Calculation</p>
+      <p className="text-xl mb-4">
+        Predict efficiency improvements (e.g. improved customer experience).  
+        Compare manual vs. AI-enhanced performance.
+      </p>
+      <p className="text-xl mb-4">
+        The system applies AI-driven models to estimate cost savings (e.g., reduced agent workload, lower operational expenses).
+      </p>
+
+      <p className="text-2xl font-medium mb-4">Step 3: Get Instant ROI Insights</p>
+      <p className="text-xl mb-4">
+        Users receive a detailed report that includes:
+      </p>
+      <ul className="text-xl mb-4 list-disc list-inside">
+        <li>Projected savings over time (monthly, yearly).</li>
+        <li>Efficiency gains & productivity improvements.</li>
+        <li>Breakdown of AI impact on different areas (e.g., cost per call reduction, customer satisfaction increase).</li>
+      </ul>
+
+      <p className="text-2xl font-medium mb-4">Step 4: Make Data-Driven Decisions</p>
+      <p className="text-xl mb-4">
+        Users can:
+      </p>
+      <ul className="text-xl list-disc list-inside">
+        <li>Adjust AI implementation levels to see different outcomes.</li>
+        <li>Download or share reports for internal decision-making.</li>
+        <li>Take actionable steps toward AI adoption in their call center.</li>
+      </ul>
+    </div>
+  </div>
+</Tab.Panel>
+
+<Tab.Panel>
+  <div className="h-screen w-full flex flex-col items-center justify-center text-center 
+               bg-[url('/assets/images/test5.jpg')] bg-cover bg-center p-6">
+    <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+      {/* <div className="flex items-start">
+        <p className="mb-4 text-3xl font-medium">
+          The Time is NOW 
+        </p>
+      </div> */}
+      <div className=" p-6">
+      <h1 className="text-4xl font-bold text-gray-800">The Time is NOW</h1>
+      <nav className="mt-6">
+        <ul className="flex space-x-6">
+          <li><Link href="/forms/roi_calculator" className="text-lg text-blue-600 hover:underline">Calculate ROI</Link></li>
+          <li><Link href="/forms/roi_view" className="text-lg text-blue-600 hover:underline">View ROI Data</Link></li>
+          <li><Link href="/forms/roi_anomaly" className="text-lg text-blue-600 hover:underline">Detect Anomalies</Link></li>
+        </ul>
+      </nav>
+    </div>
+   
+    </div>
+  </div>
+</Tab.Panel>
+
                         </Tab.Panels>
                     </Tab.Group>
                 )}
