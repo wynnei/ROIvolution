@@ -2,7 +2,12 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:7071/calculateROI";
+
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://roimyfunctionapp.azurewebsites.net/api/calculateROI"
+    : "http://localhost:7071/api/calculateROI";
+
 
 export default function CalculateROI() {
     const [formData, setFormData] = useState({

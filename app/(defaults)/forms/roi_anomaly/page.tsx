@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:7071/detectAnomalies";
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://roimyfunctionapp.azurewebsites.net/api/detectAnomalies"
+    : "http://localhost:7071/api/detectAnomalies";
 
 export default function DetectAnomalies() {
   const [anomalies, setAnomalies] = useState([]);
